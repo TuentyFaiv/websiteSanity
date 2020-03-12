@@ -1,0 +1,41 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Tonalli López <contact@tuentyfaiv.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check",
+    "build": "sanity build public -y",
+    "deploy": "sanity deploy",
+    "deploy:g": "sanity graphql deploy",
+    "delete-metadata": "sanity exec --with-user-token app/scripts/deleteWorkflowDocs.js"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^1.149.3",
+    "@sanity/components": "^1.149.3",
+    "@sanity/core": "^1.149.2",
+    "@sanity/dashboard": "^1.149.3",
+    "@sanity/default-layout": "^1.149.3",
+    "@sanity/default-login": "^1.149.0",
+    "@sanity/desk-tool": "^1.149.3",
+    "@sanity/react-hooks": "^1.149.3",
+    "@sanity/vision": "^1.149.0",
+    "date-fns": "^2.10.0",
+    "prop-types": "^15.6",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-icons": "^3.9.0",
+    "react-use-gesture": "^7.0.5",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.10"
+  },
+  "devDependencies": {
+    "@sanity/cli": "^1.149.2"
+  }
+}

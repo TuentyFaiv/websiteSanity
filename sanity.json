@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "t9co9zqc",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Website"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "dashboard-widget-structure-menu",
+    "dashboard-widget-document-list"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "app/structure"
+    },
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "app/documentActions"
+    },
+    {
+      "implements": "part:@sanity/base/document-badges/resolver",
+      "path": "app/documentBadges"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "app/schema"
+    },
+    {
+      "implements": "part:@sanity/base/tool",
+      "path": "app/tools/board"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./app/styles/variables.css"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./app/dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./app/components/myLogo.js"
+    }
+  ]
+}
